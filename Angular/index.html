@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<script type="text/javascript" src="../js/rss-reader.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/RssController.js"></script>
+	</head>
+	<body>
+		<div ng-controller="RssController">
+			<div>
+				<h1>{{RssFeed.title}}</h1>
+				<a ng-href="{{RssFeed.link}}"><h3>{{RssFeed.description}}</h3></a>
+			</div>
+			<div ng-repeat="Item in RssFeed.items">
+				<a ng-href="{{Item.link}}">{{Item.title}}</a> 
+				<span>{{Item.pubDate}}</span>
+				<br/>
+				<span>{{Item.description}}</span>
+				<hr noshade/>
+				<br/>
+			</div>
+		</div>
+	</body>
+</html>

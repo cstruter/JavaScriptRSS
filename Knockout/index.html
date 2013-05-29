@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<script type="text/javascript" src="../js/rss-reader.js"></script>
+		<script type="text/javascript" src="js/knockout-2.2.1.js"></script>
+	</head>
+	<body>
+		<div>
+			<div>
+				<h1 data-bind="text: RssFeed.title"></h1>
+				<a data-bind="attr: { href: RssFeed.link }"><h3 data-bind="text: RssFeed.description"></h3></a>
+			</div>
+			<div data-bind="foreach: RssFeed.items">
+				<a data-bind="text: title, attr: { href: link }"></a> 
+				<span data-bind="text: pubDate"></span>
+				<br/>
+				<span data-bind="text: description"></span>
+				<hr noshade/>
+				<br/>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/RssViewModel.js"></script>		
+	</body>
+</html>
