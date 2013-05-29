@@ -1,8 +1,9 @@
 <html>
 	<head>
 		<title></title>
-		<script language="javascript" src="rss.js"></script>
-		<script language="javascript">
+		<script type="text/javascript" src="../js/rss-reader.js"></script>
+		<script type="text/javascript" src="rss.js"></script>
+		<script type="text/javascript">
 			window.onload = function()
 			{
 				ReadRSS('cnn_tech_rss.xml','rssBodyTemplate','rssTitleTemplate');
@@ -11,8 +12,8 @@
 	</head>
 	<body>
 	<div id="rssTitleTemplate">
-		(::Title::)<br/>
-		<a href="(::Link::)"><h1>(::Description::)</h1></a>
+		<h1>(::Title::)</h1>
+		<a href="(::Link::)"><h3>(::Description::)</h3></a>
 	</div>
 	<div id="rssBodyTemplate">
 		<a href="(::Link::)"><b>(::Title::)</b></a> 
