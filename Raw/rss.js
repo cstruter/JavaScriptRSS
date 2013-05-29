@@ -41,6 +41,6 @@ function ReadRSS(url, Body, Title)
 	catch(e)
 	{
 		rssTitle.innerHTML = 'Error occured';
-		rssBody.innerHTML = 'Thrown Error:'+e.message+"<br/>Note: ";
+		rssBody.innerHTML = 'Thrown Error:' + e.message;
 	}
 }
